@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:weightSum="5"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:text="Weather Update"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/cityNameId"
+            android:layout_width="match_parent"
+            android:hint="Type city name"
+            android:layout_height="wrap_content">
+        </EditText>
+
+        <Button
+            android:id="@+id/getBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="getWeatherDetails"
+            android:text="Get weather Info">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/infoDisplay"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:text="Weather Info"
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>
